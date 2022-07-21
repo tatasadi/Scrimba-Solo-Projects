@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        
-        <!-- HERO SECTION -->
-        <div>
-            <h1>Visit Torshov</h1>
-            <h2>Enjoy culture and sports in this vibrant district close to the center of Oslo.</h2>
-        </div>
-        
-        <!-- ACTIVITIES SECTION -->
-        <div>
-            <h3>Top three activities to do at Torshov</h3>
-            <img src="images/park.jpg">
-            <img src="images/theatre.jpg">
-            <img src="images/sports.jpg">
-        </div>
 
-        <!-- GUIDE SECTION -->
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+    <div id="section-hero">
+        <h1 id="hero-title">Visit Torshov</h1>
+        <h2 id="hero-description">Enjoy culture and sports in this vibrant district close to the center of Oslo.</h2>
+    </div>
+
+    <!-- ACTIVITIES SECTION -->
+    <div id="section-activities">
+        <div class="activity">
+            <img class="activity-image" src="images/park.jpg">
+            <div class="activity-title">Attend a show or a concert</div>
+            <div class="activity-description">The Torshov Theatre is a great place to spend your night out.</div>
+        </div>
+        <div class="activity">
+            <img class="activity-image" src="images/theatre.jpg">
+            <div class="activity-title">Go for a piknic in the local park</div>
+            <div class="activity-description">The Torshov Park is perfect for piknic, getting some tan, or just chilling
+                out.</div>
+        </div>
+        <div class="activity">
+            <img class="activity-image" src="images/sports.jpg">
+            <div class="activity-title">Play sports at the Lilleborg field</div>
+            <div class="activity-description">Play volleyball, football, basket ball or lift some weights.</div>
+        </div>
+    </div>
+
+    <!-- GUIDE SECTION -->
+    <div id="section-guide">
         <div>
             <h3>Your guide</h3>
-            <p>"I have lived at Torshov for over 30 years, so I can show you all of its best parts and hidden secrets."</p>
+            <p class="italic">"I have lived at Torshov for over 30 years, so I can show you all of its best parts and
+                hidden secrets."
+            </p>
             <h4>Per Harald Borgen</h4>
-            <img src="images/per.jpg">
         </div>
-    </body>
+        <img id="guide-image" src="images/per.jpg">
+    </div>
+
+</body>
+
 </html>
