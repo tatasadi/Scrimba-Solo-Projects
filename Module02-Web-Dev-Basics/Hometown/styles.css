@@ -48,6 +48,7 @@ img {
   background-color: #f1faee;
   display: flex;
   padding: 60px 30px;
+  justify-content: center;
 }
 
 .activity {
