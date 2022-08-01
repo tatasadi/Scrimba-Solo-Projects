@@ -11,23 +11,21 @@ btnPrev.addEventListener("click", moveToPrevSlide);
 btnNext.addEventListener("click", moveToNextSlide);
 
 function moveToPrevSlide() {
-  slides[slidePosition].classList.remove("carousel-item-visible");
   if (slidePosition === 0) {
     slidePosition = totalSlides - 1;
   } else {
     slidePosition--;
   }
-  slides[slidePosition].classList.add("carousel-item-visible");
+  goToSlide(slidePosition);
 }
 
 function moveToNextSlide() {
-  slides[slidePosition].classList.remove("carousel-item-visible");
   if (slidePosition === totalSlides - 1) {
     slidePosition = 0;
   } else {
     slidePosition++;
   }
-  slides[slidePosition].classList.add("carousel-item-visible");
+  goToSlide(slidePosition);
 }
 
 function hideAllSlides() {
@@ -44,9 +42,14 @@ function removeActiveFromAllDots() {
 
 for (let i = 0; i < dots.length; i++) {
   dots[i].addEventListener("click", function () {
-    hideAllSlides();
-    removeActiveFromAllDots();
-    dots[i].classList.add("dot-active");
-    slides[i].classList.add("carousel-item-visible");
+    goToSlide(i);
   });
+}
+
+
+function goToSlide(index){
+  hideAllSlides();
+  removeActiveFromAllDots();
+  dots[index].classList.add("dot-active");
+  slides[index].classList.add("carousel-item-visible");
 }
